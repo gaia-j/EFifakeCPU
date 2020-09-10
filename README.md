@@ -5,7 +5,9 @@ This is an efi folder that i made to run my hackintosh using a confidential inte
   <img src="./readme/high-s-info.png" height="400" />
   <img src="./readme/mojave-info.png" height="400" />
 </p>
+
 ## Getting Started
+
 First make sure if you can install your macOS without any patch, try differents EFI folders (i recommend searching in Olarila, it is a great hackintosh forum with an amazing amount of content and EFI folders)before using mine, maybe you don't need these patches.
 I used some kernel patches and a fakeCPU ID to successfully boot.
 
@@ -57,4 +59,5 @@ That's it, now (hopefully) you can enjoy your hackintosh with your confidential 
 *Unfortunately it's showing as i3, but it is an i7 with 4 cores and 8 threads runnig great, also tested with metal on premiere pro export and it's fine
 
 ## THANKS!
+
 Especial thanks and credits to dortania's openCore (github.com/dortania/OpenCore-Desktop-Guide) and Olarila (olarila.com/)
