@@ -8,7 +8,7 @@ This is an efi folder that i made to run my hackintosh using a confidential inte
 
 ## Getting Started
 
-First make sure if you can install your macOS without any patch, try differents EFI folders (i recommend searching in Olarila, it is a great hackintosh forum with an amazing amount of content and EFI folders)before using mine, maybe you don't need these patches.
+First make sure if you can install your macOS without any patch, try differents EFI folders (i recommend searching in Olarila, it is a great hackintosh forum with an amazing amount of content and EFI folders) before using mine, maybe you don't need these patches.
 I used some kernel patches and a fakeCPU ID to successfully boot.
 
 ### Prerequisites
@@ -37,7 +37,7 @@ If you want to change or disable the network driver, download the right kext to 
 
 
 #### Disabling NVIDIA driver
-If you have and AMD or HD Graphics GPU and want disable the GPU driver, edit "config.plist":
+If you have an AMD or HD Graphics GPU and want disable the GPU driver, edit "config.plist":
     If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):
         Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
         <p align="center">
@@ -60,4 +60,4 @@ That's it, now (hopefully) you can enjoy your hackintosh with your confidential 
 
 ## THANKS!
 
-Especial thanks and credits to dortania's openCore (github.com/dortania/OpenCore-Desktop-Guide) and Olarila (olarila.com/)
+Especial thanks and credits to dortania's openCore (github.com/dortania/OpenCore-Desktop-Guide) and Olarila (olarila.com)
