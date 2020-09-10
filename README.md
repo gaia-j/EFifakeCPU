@@ -1,7 +1,10 @@
 # EFI opencore with FakeCPU
 
-This is an efi folder that i made to run my hackintosh using a confidential intel haswell(4th gen) i7
-
+This is an efi folder that i made to run my hackintosh using a confidential intel haswell(4th gen) i7. It is working with High Sierra, Mojave and Big Sur. I didn't check compability with catalina and other versions, but i think it will work for catalina too.
+<p align="center">
+  <img src="./readme/high-s-info.png" height="400" />
+  <img src="./readme/mojave-info.png" height="400" />
+</p>
 ## Getting Started
 First make sure if you can install your macOS without any patch, try differents EFI folders (i recommend searching in Olarila, it is a great hackintosh forum with an amazing amount of content and EFI folders)before using mine, maybe you don't need these patches.
 I used some kernel patches and a fakeCPU ID to successfully boot.
@@ -16,71 +19,42 @@ Remember that nvidia gpu's are only supported on macOS 10.13.x. Mojave, Catalina
 
 Just paste my EFI folder in your EFI partition. Please check the config.plist and kext folders before booting, this EFI folder are injecting nvidia web drivers and Realtek8111g network controller
 
-Say what the step will be
+#### Changing network driver
 
-```
-Give the example
-```
+If you want to change or disable the network driver, download the right kext to your controller, put inside "kexts" folder and edit "config.plist":
+    If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):
+        Open config.plist on OCC then go to Kernel tab, disable "RealtekRTL8111.kext" and inject your network controller's kext:
+        <p align="center">
+        <img src="./readme/realtek-core.png" height="400" />
+        </p>
+    If you're using windows or linux:
+        Open "config.plist" with any text editor, search and remove the selected lines to disable. If you're changing your network driver, just replace "RealtekRTL8111" from green highlighted lines with your kext's name
+        <p align="center">
+        <img src="./readme/realtek-code.png" height="400" />
+        </p>
 
-And repeat
 
-```
-until finished
-```
+#### Disabling NVIDIA driver
+If you have and AMD or HD Graphics GPU and want disable the GPU driver, edit "config.plist":
+    If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):
+        Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
+        <p align="center">
+        <img src="./readme/nvda-core.png" height="400" />
+        </p>
+    If you're using windows or linux:
+        Open "config.plist" with any text editor, search and remove the selected lines to disable:
+        <p align="center">
+        <img src="./readme/nvda-code.png" height="400" />
+        </p>
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+That's it, now (hopefully) you can enjoy your hackintosh with your confidential or unsupported CPU! Cheers
+<p align="center">
+<img src="./readme/final.png" height="400" />
+</p>
+*Unfortunately it's showing as i3, but it is an i7 with 4 cores and 8 threads runnig great, also tested with metal on premiere pro export and it's fine
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+## THANKS!
+Especial thanks and credits to dortania's openCore (github.com/dortania/OpenCore-Desktop-Guide) and Olarila (olarila.com/)
