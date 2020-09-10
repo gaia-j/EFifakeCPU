@@ -37,7 +37,7 @@ If you want to change or disable the network driver, download the right kext to 
 
 
 #### Disabling NVIDIA driver
-If you have an AMD or HD Graphics GPU and want disable the GPU driver, edit "config.plist":
+If you have an AMD or HD Graphics GPU and want disable the NVIDIA GPU driver, edit "config.plist":
     If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):
         Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
         <p align="center">
