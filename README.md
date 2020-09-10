@@ -56,7 +56,7 @@ That's it, now (hopefully) you can enjoy your hackintosh with your confidential 
 <p align="center">
 <img src="./readme/final.png" height="400" />
 </p>
-*Unfortunately it's showing as i3, but it is an i7 with 4 cores and 8 threads runnig great, also tested with metal on premiere pro export and it's fine
+*Unfortunately it's showing as i3, but it is an i7 with 4 cores and 8 threads running great, also tested iGPU with metal on premiere pro export and it's fine
 
 ## THANKS!
 
