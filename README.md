@@ -23,14 +23,14 @@ Just paste my EFI folder in your EFI partition. Please check the config.plist an
 
 #### Changing network driver
 
-If you want to change or disable the network driver, download the right kext to your controller, put inside "kexts" folder and edit "config.plist":
-    If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):
-        Open config.plist on OCC then go to Kernel tab, disable "RealtekRTL8111.kext" and inject your network controller's kext:
+If you want to change or disable the network driver, download the right kext to your controller, put inside "kexts" folder and edit "config.plist":<br>
+    <p>     If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):</p>
+        <p>         Open config.plist on OCC then go to Kernel tab, disable "RealtekRTL8111.kext" and inject your network controller's kext:</p>
         <p align="center">
         <img src="./readme/realtek-core.png" height="400" />
         </p>
-    If you're using windows or linux:
-        Open "config.plist" with any text editor, search and remove the selected lines to disable. If you're changing your network driver, just replace "RealtekRTL8111" from green highlighted lines with your kext's name
+     <p>     If you're using windows or linux:</p><br>
+        <p>         Open "config.plist" with any text editor, search and remove the selected lines to disable. If you're changing your network driver, just replace "RealtekRTL8111" from green highlighted lines with your kext's name</p>
         <p align="center">
         <img src="./readme/realtek-code.png" height="400" />
         </p>
@@ -38,13 +38,13 @@ If you want to change or disable the network driver, download the right kext to 
 
 #### Disabling NVIDIA driver
 If you have an AMD or HD Graphics GPU and want disable the NVIDIA GPU driver, edit "config.plist": <br>
-    If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):<br>
-        Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
+    <p>     If you're using mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):</p> <br>
+    <p>         Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
         <p align="center">
         <img src="./readme/nvda-core.png" height="400" />
         </p><br>
-    If you're using windows or linux:<br>
-        Open "config.plist" with any text editor, search and remove the selected lines to disable:<br>
+    <p>     If you're using windows or linux:<br></p>
+    <p>         Open "config.plist" with any text editor, search and remove the selected lines to disable:</p><br>
         <p align="center">
         <img src="./readme/nvda-code.png" height="400" />
         </p>
