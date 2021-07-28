@@ -14,17 +14,17 @@ I used some kernel patches and a fakeCPU ID to successfully boot.
 ### Prerequisites
 
 Unsupported intel CPUs like Ivy Bridge, server CPUs some xeon and high-end processors like Haswell-E.
-Remember that nvidia gpu's are only supported on macOS 10.13.x. Mojave, Catalina and Big Sur you won't be able to use your gpu.
+Remember that nvidia gpu's are only supported on macOS 10.13.x and below. Mojave, Catalina and Big Sur you won't be able to use your gpu.
 
 
 ### Installing
 
-Just paste my EFI folder in your EFI partition. Please check the config.plist and kext folders before booting, this EFI folder are injecting nvidia web drivers and Realtek8111g network controller
+Just paste my EFI folder into your EFI partition. Please check the config.plist and kext folders before booting, this EFI folder are injecting nvidia web drivers and Realtek8111g network controller
 
 #### Changing network driver
 
 If you want to change or disable the network driver, download the right kext to your controller, put inside "kexts" folder and edit "config.plist":<br>
-    <p>     If you have an mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):</p>
+    <p>     If you have a mac, hackintosh or virtual machine running macOS, you can edit it using Open Core Configurator (OCC):</p>
         <p>         Open config.plist on OCC then go to Kernel tab, disable "RealtekRTL8111.kext" and inject your network controller's kext:</p>
         <p align="center">
         <img src="./readme/realtek-core.png" height="400" />
@@ -38,7 +38,7 @@ If you want to change or disable the network driver, download the right kext to 
 
 #### Disabling NVIDIA driver
 If you have an AMD or HD Graphics GPU and want disable the NVIDIA GPU driver, edit "config.plist": <br>
-    <p>     If you're using mac, hackintosh or virtual machine, you can edit it using Open Core Configurator (OCC):</p> <br>
+    <p>     If you're using mac, hackintosh or virtual machine running macOS, you can edit it using Open Core Configurator (OCC):</p> <br>
     <p>         Open config.plist on OCC then go to NVRAM tab, enter the second UUID and remove "nvda_drv" key:
         <p align="center">
         <img src="./readme/nvda-core.png" height="400" />
