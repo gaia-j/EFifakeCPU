@@ -1,6 +1,6 @@
 # EFI opencore with FakeCPU
 
-This is an efi folder that i made to run my hackintosh using a confidential intel haswell(4th gen) i7. It is working with High Sierra, Mojave and Catalina. I didn't check compability with catalina and other versions, but i think it will work for catalina too.
+This is an efi folder that i made to run my hackintosh using a confidential intel haswell(4th gen) i7. It is working with High Sierra, Mojave and Catalina. I didn't check compability with catalina and other versions, but i think it won't work with big sur.
 <p align="center">
   <img src="./readme/high-s-info.png" height="400" />
   <img src="./readme/mojave-info.png" height="400" />
